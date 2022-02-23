@@ -22,35 +22,35 @@ Dado um sistema de diretórios assim:
 
 ```
 .
-|- input1
-| |- a2
-| |- a4
-| |- a6
-| |- a8
-|- input2
-| |- a3
-| |- a6
-| |- a9
-| |- a12
-|- output
+\- input1
+| \- a2
+| \- a4
+| \- a6
+| \- a8
+\- input2
+| \- a3
+| \- a6
+| \- a9
+| \- a12
+\- output
 ```
 
 Quando rodar o programa, ficará assim:
 
 ```
 .
-|- input1
-| |- a2
-| |- a4
-| |- a6
-| |- a8
-|- input2
-| |- a3
-| |- a6
-| |- a9
-| |- a12
-|- output
-  |- a6
+\- input1
+| \- a2
+| \- a4
+| \- a6
+| \- a8
+\- input2
+| \- a3
+| \- a6
+| \- a9
+| \- a12
+\- output
+  \- a6
 ```
 
 E o arquivo `./output/a6` terá o conteúdo de `input1/a6` mais o conteúdo de `input2/a6`.
