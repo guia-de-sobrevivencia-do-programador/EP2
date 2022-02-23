@@ -77,7 +77,10 @@ Por ultimo, para rodar o programa você pode utilizar os mesmos argumentos passa
 
 ## Dicas
 
-* O comando `frame` funciona muito bem em conjunto com o comando `backtrace`;
+* No GDB, o comando `frame` funciona muito bem em conjunto com o comando `backtrace`;
+* No bash, duas funcionalidades que podem vir a ser úteis:
+	* arranjo (`info bash` em *Bash Features > Arrays*) e;
+	* aritmética em bash (`info bash` em *Bash Features > Shell Arithmetic*).
 
 ## Tarefas
 
