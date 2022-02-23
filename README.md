@@ -10,6 +10,51 @@ Olá, dev! Esse é o repositório de um dos possíveis EPs que vocês podem faze
 * Marque as tarefas realizadas no README.
 * Crie um arquivo .zip contendo todo o código deste repositório (**não é necessário adicionar a pasta node_modules no zip**) com os arquivos adicionais das tarefas abaixo.
 
+## O que o programa `./merge_files` deve fazer?
+
+O programa `./merge_files` recebe *N* diretórios como argumento. *N - 1* diretórios de entrada e *1* diretório de saída (o *N*ésimo ou último argumento).
+
+O programa verifica em todos os *N - 1* diretórios de entrada se existe algum arquivo com o mesmo nome. Se sim, um arquivo com esse nome é criado no diretório de saída. Seu conteúdo é a concatenação do conteúdo de todos os outros arquivos com o mesmo nome.
+
+### Exemplo
+
+Dado um sistema de diretórios assim:
+
+```
+.
+|- input1
+| |- a2
+| |- a4
+| |- a6
+| |- a8
+|- input2
+| |- a3
+| |- a6
+| |- a9
+| |- a12
+|- output
+```
+
+Quando rodar o programa, ficará assim:
+
+```
+.
+|- input1
+| |- a2
+| |- a4
+| |- a6
+| |- a8
+|- input2
+| |- a3
+| |- a6
+| |- a9
+| |- a12
+|- output
+  |- a6
+```
+
+E o arquivo `./output/a6` terá o conteúdo de `input1/a6` mais o conteúdo de `input2/a6`.
+
 ## Como gerar os arquivos de entrada e rodar o EP
 
 Primeiro você precisa gerar os arquivos de entrada. Esses podem ser gerados utilizando o script `generate_input.sh`:
@@ -29,6 +74,10 @@ Por ultimo, para rodar o programa você pode utilizar os mesmos argumentos passa
 ```bash
 ./merge_files input1 input2 output
 ```
+
+## Dicas
+
+* O comando `frame` funciona muito bem em conjunto com o comando `backtrace`;
 
 ## Tarefas
 
