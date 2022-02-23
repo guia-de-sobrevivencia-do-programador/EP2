@@ -20,7 +20,7 @@ char* join_path(const char* directory, const char* filename)
 	}
 
 	char* path_format =
-	    (directory[strlen(directory) - 1] == '/') ? "%s/%s" : "%s%s";
+	    (directory[strlen(directory) - 1] != '/') ? "%s/%s" : "%s%s";
 
 	sprintf(realpath, path_format, directory, filename);
 	return realpath;
